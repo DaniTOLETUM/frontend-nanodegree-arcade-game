@@ -2,7 +2,7 @@
 /*---------------------------*/
 
 // Enemies our player must avoid
-var Enemy = function() {
+var Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     //Enemy variables
@@ -52,7 +52,7 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var Player = function() {
+var Player = function(x, y, speed) {
     //Player's variables
     this.x = x;
     this.y = y;
@@ -89,7 +89,17 @@ Player.prototype.render = function() {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
+var allEnemies = [];
 
+//Initial position of enemies
+var enemyPosition = [60, 140, 220];
+var player = new Player(200, 380, 50);
+var enemy;
+
+enemyPosition.forEach(function(posY) {
+    enemy = new Enemy(0, posY, 100 + Math.floor(Math.random() * 512));
+    allEnemies.push(enemy);
+});
 
 
 // This listens for key presses and sends the keys to your
