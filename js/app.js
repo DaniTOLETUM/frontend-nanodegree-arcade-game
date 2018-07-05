@@ -34,7 +34,7 @@ Enemy.prototype.update = function(dt) {
 
     //Reset position of enemies when they go out of canvas and new speed
     if (this.x > 550){
-        this.x = 100;
+        this.x = -100;
         this.speed = 100 + Math.floor(Math.random() * 512);
     }
 };
