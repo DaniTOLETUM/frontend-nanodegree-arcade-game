@@ -52,6 +52,38 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
+var Player = function() {
+    //Player's variables
+    this.x = x;
+    this.y = y;
+    this.speed = speed;
+    //The image/sprite for our player
+    this.sprite = 'images/char-boy.png';
+};
+
+//Player Prototype
+Player.prototype.update = function() {
+    //Player can't go out of screen
+    if (this.y > 380) {
+        this.y = 380;
+    }
+    if (this.x > 400) {
+        this.x = 400;
+    }
+    if (this.x < 0) {
+        this.x = 0;
+    }
+
+    //If Player reach top of canvas, he wins
+    if (this.y < 0) {
+        this.x = 200;
+        this.y = 380;
+    }
+};
+
+Player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
 
 
 // Now instantiate your objects.
