@@ -1,6 +1,10 @@
-frontend-nanodegree-arcade-game
+Front-End Arcade Game
 ===============================
+In this Arcade Game, the goal is to reach the water without crashing with the enemies (bugs).
+The player can move in any direction (up, down, left and rigth) using the arrow keys.
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+How to Play:
+Download the repository in your computer or clone it in your github.
+Open the indrx.html file.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+
